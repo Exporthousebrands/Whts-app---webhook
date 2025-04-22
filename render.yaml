@@ -1,0 +1,11 @@
+# Exported from Render on 2025-04-22T08:07:47Z
+services:
+- type: web
+  name: whatsapp-webhook
+  runtime: python
+  repo: https://github.com/Exporthousebrands/Whts-app---webhook
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+version: "1"
